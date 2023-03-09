@@ -34,19 +34,19 @@ export default function CreatePost() {
         }
 
     return(
-        <form onSubmit={submitPost} className="bg-white my-8 p-8 rounded-md">
+        <form onSubmit={submitPost} className="drop-shadow-lg bg-white my-8 p-8 rounded-md">
             <div className="flex flex-col my-4">
                 <textarea onChange={(e) => setTitle(e.target.value)} name="title" value={title} placeholder= "Build your program!"
                 className="p-4 text-lg rounded-md my-2 bg-gray-200"
                 ></textarea>
             </div>
-            <div>
+            <div className="flex justify-end drop-shadow">
                 <button
                     disabled={isDisabled}
-                    className="text-sm bg-teal-600 text-white py-2 px-6 rounded-xl disabled:opacity-50"
+                    className="text-sm bg-blue-600 text-white py-2 px-6 rounded-xl disabled:opacity-50"
                     type="submit"
                 >
-                    Create Workout
+                    Create workout!
                 </button>
             </div>
         </form>

@@ -16,7 +16,7 @@ export default function Logged({image}: User){
             </button>
             <Link href={'/dashboard'}>
                 <Image 
-                className="rounded-full drop-shadow"
+                className="rounded-full drop-shadow-lg"
                 width={64} height={64} src={image} alt='' priority />
             </Link>
         </li>
