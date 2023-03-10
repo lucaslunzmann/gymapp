@@ -6,7 +6,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        forest: 'var(--forest)'
+      },
+      fontFamily: {
+        montserrat: ['var(--font-montserrat)'],
+      }
+    }
   },
   plugins: [],
 }

@@ -1,19 +1,19 @@
 import './globals.css'
 import Nav from './auth/Nav'
-import { Roboto } from "@next/font/google"
+import { Montserrat, Roboto } from "@next/font/google"
 import QueryWrapper from './auth/QueryWrapper'
 
-const roboto =  Roboto({
+const montserrat = Montserrat({
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: '--font-roboto',
+  variable: "--font-montserrat",
 })
 
 export default function RootLayout({children}) {
   return (
     <html lang="en">
       <head />
-      <body className={`mx-4 md:mx-48 xl:mx-96 ${roboto.variable} p-10 bg-zinc-100`}>
+      <body className={`mx-4 md:mx-48 xl:mx-96 ${montserrat.variable} p-10 bg-zinc-100 font-montserrat`}>
         <QueryWrapper>
           <Nav />
 

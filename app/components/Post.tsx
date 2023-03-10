@@ -31,7 +31,7 @@ export default function Post({avatar, name, postTitle, id, comments}: PostProps)
                 <div className="gap-4">
                     <p className="text-md text-gray-700">Total Workouts: {comments?.length}</p>
                 </div>
-                <button className="text-sm bg-transparent text-slate-700 border-2 border-slate-700 py-2 px-6 rounded-lg disabled:opacity-50 hover:border-orange-500 font-bold">
+                <button className="text-sm bg-transparent text-slate-700 border-2 transition-colors duration-200 border-slate-700 py-2 px-6 rounded-lg disabled:opacity-50 hover:border-orange-500 font-bold">
                     <Link href={`/post/${id}`}>
                             <p>Add Workouts</p>
                     </Link>
