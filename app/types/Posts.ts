@@ -1,7 +1,7 @@
 export type PostType = {
     title: string
     id: string
-    createAt: string
+    createdAt: string
     user: {
         name: string
         image: string
@@ -9,7 +9,7 @@ export type PostType = {
     comments?: {
         createdAt: string
         id: string
-        postedId: string
+        postId: string
         userId: string
     }[]
 }
