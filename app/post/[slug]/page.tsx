@@ -1,6 +1,6 @@
 'use client'
 
-import Post from "@/app/components/Post"
+import PostNoAdd from "@/app/components/PostNoAdd"
 import {useQuery} from '@tanstack/react-query'
 import axios from "axios"
 import { PostType } from "@/app/types/Posts"
@@ -31,7 +31,7 @@ export default function PostDetail(url: URL) {
         console.log(data)
     return(
         <div>
-            <Post
+            <PostNoAdd
                 id={data.id} 
                 name={data.user.name}
                 avatar={data.user.image}

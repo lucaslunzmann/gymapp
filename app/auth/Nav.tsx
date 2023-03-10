@@ -9,7 +9,9 @@ export default async function Nav() {
     return (
         <nav className="flex justify-between items-center py-8">
             <Link href={'/'}>
-                <h1 className="font-bold text-3xl hover:text-gray-700">Gym App</h1>
+                <span className="font-bold text-slate-900 text-3xl hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r from-violet-600 via-fuchsia-500 to-orange-500"
+                
+                >Gym App </span>
             </Link>
             <ul className="flex items-center gap-6">
                 {!session?.user && <Login />}  

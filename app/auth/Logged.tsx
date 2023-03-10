@@ -11,7 +11,7 @@ type User = {
 export default function Logged({image}: User){
     return(
         <li className="flex gap-8 items-center">
-            <button onClick={() => signOut()} className="bg-gray-700 text-white text-sm px-6 py-2 rounded-md">
+            <button onClick={() => signOut()} className="bg-slate-700 text-white text-sm px-6 py-2 rounded-md">
                 Sign Out
             </button>
             <Link href={'/dashboard'}>

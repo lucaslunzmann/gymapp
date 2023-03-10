@@ -26,5 +26,6 @@ export default function MyPosts() {
                 comments={post.comments}
             />)}
         </div>
+        
     )
 }

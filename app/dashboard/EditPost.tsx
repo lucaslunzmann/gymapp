@@ -6,6 +6,7 @@ import { useState } from "react"
 import Toggle from "../components/Toggle"
 import axios from "axios"
 import toast from "react-hot-toast"
+import Link from "next/link"
 
 
 
@@ -51,18 +52,25 @@ export default function EditPost({avatar, name, title, comments, id}: EditProps)
     <>
         <div className="bg-white my-8 p-8 rounded-lg">
             <div className="flex items-center gap-2">
-                <Image className="rounded-full" width={32} height={32} src={avatar} alt="avatar" />
+                <Image className="rounded-full drop-shadow-lg mr-1" width={32} height={32} src={avatar} alt="avatar" />
                 <h3 className="font-bold text-gray-700">{name}</h3>
             </div>
-            <div className="my-8">
-                <p className="break-all">{title}</p>
+            <div className="my-8 font-bold text-xl">
+                <span className="break-all bg-clip-text text-transparent bg-gradient-to-r from-violet-600 via-fuchsia-500 to-orange-500">{title}</span>
             </div>
-            <div className="flex items-center gap-4">
-                <p className="text-sm font-bold text-gray-700">{comments?.length} Comments</p>
+            <div className="flex items-center justify-between gap-2">
+                <p className="text-md text-gray-700">Total Workouts: {comments?.length}</p>
+            <div>
+                <button className="text-sm bg-transparent text-slate-700 mx-4 border-slate-700 py-1 px-2 rounded-lg hover:underline disabled:opacity-50 font-bold">
+                    <Link href={`/post/${id}`}>
+                            <p>Add Workouts</p>
+                    </Link>
+                </button>
                 <button onClick={(e) => {
                     setToggle(true)
                 }}
-                className="text-sm font-bold text-red-500">Delete</button>
+                className="text-sm font-bold text-red-500 hover:underline">Delete</button>
+            </div>
             </div>
         </div>
         {toggle && <Toggle deletePost={deletePost} setToggle={setToggle}/>}

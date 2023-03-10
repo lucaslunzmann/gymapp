@@ -5,6 +5,7 @@ import { use, useState } from "react"
 import axios from "axios"
 import toast from 'react-hot-toast'
 import { AxiosError } from "axios"
+import App from "./TextEditor"
 
 type PostProps = {
     id?: string
@@ -44,8 +45,10 @@ export default function AddComment({ id }: PostProps) {
         }
 
     return(
+  <div>
+        <App />
         <form onSubmit={submitComment} className="my-8">
-            <h3>Add a comment</h3>
+            <h3>Start adding workouts to this program!</h3>
             <div className="flex flex-col my-2">
                 <input
                     onChange={(e) => setTitle(e.target.value)}
@@ -53,15 +56,16 @@ export default function AddComment({ id }: PostProps) {
                     type='text'
                     name='title'
                     className="p-4 text-lg rounded-md my-2"
-                />
+                /> 
             </div>
                 <button
                     disabled={isDisabled}
                     className="text-sm bg-teal-600 text-white py-2 px-6 rounded-xl disabled:opacity-25"
                     type='submit'
                 >
-                    Add a comment 💬
+                    Add
                 </button>
         </form>
+</div>
     )
 }
