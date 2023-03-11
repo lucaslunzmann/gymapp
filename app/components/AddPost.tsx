@@ -3,6 +3,7 @@ import { useState } from "react"
 import { useMutation, useQueryClient} from "@tanstack/react-query"
 import axios, { AxiosError } from 'axios'
 import toast from "react-hot-toast"
+import Dropdown from "./Dropdown"
 
 export default function CreatePost() {
     const [title, setTitle] = useState('')
@@ -46,11 +47,11 @@ export default function CreatePost() {
                         name="title"
                         value={title}
                         placeholder= "Name of program..."
-                        className="p-4 text-lg rounded-md my-2 bg-gray-200"
+                        className="resize-y p-4 text-lg rounded-md my-2 bg-gray-200"
                     ></textarea>
                 
             </div>
-            <div className="flex justify-end drop-shadow">
+            <div className="flex justify-end space-x-2 drop-shadow">
                 <button
                     disabled={isDisabled}
                     className="text-sm bg-slate-700 text-white py-2 px-6 rounded-lg disabled:opacity-50"
@@ -58,6 +59,7 @@ export default function CreatePost() {
                 >
                     Create Program 
                 </button>
+                <Dropdown />
             </div>
         </form>
     )

@@ -10,7 +10,6 @@ export default async function Nav() {
         <nav className="flex justify-between items-center py-8">
             <Link href={'/'}>
                 <span className="font-bold text-slate-900 text-3xl hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r from-violet-600 via-fuchsia-500 to-orange-500"
-                
                 >Gym App </span>
             </Link>
             <ul className="flex items-center gap-6">

@@ -10,14 +10,11 @@ type User = {
 
 export default function Logged({image}: User){
     return(
-        <li className="flex gap-8 items-center">
-            <button onClick={() => signOut()} className="bg-slate-700 text-white text-sm px-6 py-2 rounded-md">
-                Sign Out
-            </button>
+        <li className="">
             <Link href={'/dashboard'}>
                 <Image 
                 className="rounded-full drop-shadow-lg hover:scale-110 transition duration-500 ease-in-out"
-                width={64} height={64} src={image} alt='' priority />
+                width={40} height={40} src={image} alt='' priority />
             </Link>
         </li>
     )
